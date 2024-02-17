@@ -1,10 +1,16 @@
 body
 {
-    font-family: 'Courier New', Courier, monospace;
+    .roboto-thin {
+        font-family: "Roboto", sans-serif;
+        font-weight: 100;
+        font-style: normal;
+      }
+      
       padding:0; 
       margin:0;   
 }
 
+/* Inicio Menú*/
 /*Estilos Generales*/
 nav ul
 {
@@ -18,7 +24,7 @@ line-height:3rem;
 position: relative;
 }
 
-nav li ul
+.menu ul
 {
  position: absolute;   
 }
@@ -36,18 +42,23 @@ nav a:hover
 {
     background: rgba(0,0,0,.5);
 }
-nav ul ul ul
+/*nav li ul
 {
-    display:none;
+    display:none
 }
+
+nav li:hover > ul
+{
+    display: block;
+}/*
 /*PRIMER NIVEL*/
-nav > ul
+.menu
 {
 background: #333;
 display:table;
 width:100%;
 }
-nav > ul > li
+.menu > li
 {
 float: left;
 }
@@ -55,16 +66,39 @@ float: left;
 nav li li
 {
 background: #222;
+transition:all .6s;
+max-height: 0;
 width:200px;
 }
-nav > ul > li > ul
+ nav li:hover > ul > li
+ {
+    max-height: 500px;
+    overflow: visible;
+ }
+.menu li > ul
 {
 top:200%;
 }
 /*TERCER NIVEL*/
 
-nav ul ul ul
+.menu ul ul
 {
     left:100%;
     top: 0;
+}
+/*Fin Menú*/
+
+/*POSICION RESPONSIVE MENU*/
+nav
+{
+    nav:rgba(0,0,0,.8); 
+position: absolute;
+left:-60rem ;
+z-index:20;    
+height:100%;
+}
+
+nav.mostrar
+{
+left:0;    
 }
