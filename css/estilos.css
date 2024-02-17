@@ -55,6 +55,7 @@ float: left;
 nav li li
 {
 background: #222;
+width:200px;
 }
 nav > ul > li > ul
 {
@@ -65,4 +66,5 @@ top:200%;
 nav ul ul ul
 {
     left:100%;
+    top: 0;
 }
