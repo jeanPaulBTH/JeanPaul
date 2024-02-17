@@ -1,10 +1,68 @@
 body
 {
-    .roboto-thin {
-        font-family: "Roboto", sans-serif;
-        font-weight: 100;
-        font-style: normal;
-      }
+    font-family: 'Courier New', Courier, monospace;
       padding:0; 
       margin:0;   
+}
+
+/*Estilos Generales*/
+nav ul
+{
+    list-style: none;
+    padding:0;
+}
+
+nav li
+{
+line-height:3rem;
+position: relative;
+}
+
+nav li ul
+{
+ position: absolute;   
+}
+
+nav a
+{
+    color:#ddd;
+    display: block;
+    padding: 0 2.5rem;
+    text-decoration: none;
+    transition: .4%;
+}
+
+nav a:hover
+{
+    background: rgba(0,0,0,.5);
+}
+nav ul ul ul
+{
+    display:none;
+}
+/*PRIMER NIVEL*/
+nav > ul
+{
+background: #333;
+display:table;
+width:100%;
+}
+nav > ul > li
+{
+float: left;
+}
+/*SEGUNDO NIVEL*/
+nav li li
+{
+background: #222;
+}
+nav > ul > li > ul
+{
+top:200%;
+}
+/*TERCER NIVEL*/
+
+nav ul ul ul
+{
+    left:100%;
 }
